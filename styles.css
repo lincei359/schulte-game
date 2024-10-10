@@ -9,6 +9,18 @@ body {
     height: 100vh;
     background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4);
     overflow: hidden;
+    position: relative; /* 确保背景不会覆盖内容 */
+    z-index: 1; /* 确保内容在背景上 */
+}
+
+/* 背景样式修正 */
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #84fab0, #8fd3f4);
+    z-index: 0; /* 背景层确保不覆盖内容 */
+    overflow: hidden;
 }
 
 /* 容器样式 */
@@ -20,6 +32,8 @@ body {
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
     max-width: 700px;
     width: 100%; /* 修正居中问题 */
+    z-index: 10; /* 确保容器在前面 */
+    position: relative;
 }
 
 /* 标题样式 */
@@ -49,6 +63,8 @@ h1 {
     transition: transform 0.3s, box-shadow 0.3s;
     margin: 10px;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    position: relative; /* 确保按钮在前 */
+    z-index: 11; /* 提高按钮的层级，确保可点击 */
 }
 
 .btn:hover {
@@ -62,8 +78,10 @@ h1 {
     grid-template-columns: repeat(5, 100px);
     grid-gap: 10px;
     justify-content: center;
-    margin: 20px auto 0; /* 居中调整 */
+    margin: 20px auto 0;
     padding: 0;
+    position: relative; /* 确保网格在前 */
+    z-index: 10;
 }
 
 /* 数字方块的颜色和动画 */
@@ -80,6 +98,8 @@ h1 {
     color: #333;
     cursor: pointer;
     transition: transform 0.3s, background-color 0.3s;
+    position: relative;
+    z-index: 10;
 }
 
 .grid-item:hover {
@@ -97,3 +117,8 @@ h1 {
 }
 
 /* 计时器样式 */
+#timer, #best-time {
+    font-size: 20px;
+    color: #555;
+    margin-top: 20px;
+}
