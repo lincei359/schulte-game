@@ -1,0 +1,124 @@
+/* 全局样式 */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4);
+    overflow: hidden;
+    position: relative; /* 确保背景不会覆盖内容 */
+    z-index: 1; /* 确保内容在背景上 */
+}
+
+/* 背景样式修正 */
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #84fab0, #8fd3f4);
+    z-index: 0; /* 背景层确保不覆盖内容 */
+    overflow: hidden;
+}
+
+/* 容器样式 */
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    max-width: 700px;
+    width: 100%; /* 修正居中问题 */
+    z-index: 10; /* 确保容器在前面 */
+    position: relative;
+}
+
+/* 标题样式 */
+h1 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* 介绍部分样式 */
+#description {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* 按钮样式 */
+.btn {
+    background: linear-gradient(45deg, #ff6ec4, #7873f5);
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin: 10px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    position: relative; /* 确保按钮在前 */
+    z-index: 11; /* 提高按钮的层级，确保可点击 */
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* 网格容器样式 */
+#grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 100px);
+    grid-gap: 10px;
+    justify-content: center;
+    margin: 20px auto 0;
+    padding: 0;
+    position: relative; /* 确保网格在前 */
+    z-index: 10;
+}
+
+/* 数字方块的颜色和动画 */
+.grid-item {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    position: relative;
+    z-index: 10;
+}
+
+.grid-item:hover {
+    transform: scale(1.1);
+    background-color: #ff6ec4;
+    color: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* 点击过的项样式 */
+.grid-item.clicked {
+    background-color: #90ee90;
+    color: white;
+    transform: scale(1);
+}
+
+/* 计时器样式 */
+#timer, #best-time {
+    font-size: 20px;
+    color: #555;
+    margin-top: 20px;
+}
