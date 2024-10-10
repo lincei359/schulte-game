@@ -80,6 +80,6 @@ function getRandomColor() {
     return colors[Math.floor(Math.random() * colors.length)];
 }
 
-function toggleMode() {
+function toggleMode() {}
     isCountdown = !isCountdown;
    
